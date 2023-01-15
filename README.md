@@ -8,6 +8,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 
 1. [Use proper variable names](#usepropervariablenames)
 1. [Be careful with comparison using the loose equality operator](#becarefulwithcomparisonusingthelooseequalityoperator)
+1. [Check property exists in an object](#checkpropertyexistsinanobject)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -39,4 +40,17 @@ const tightComparison6 = false === 0; // false
 
 const looseComparison7 = null == undefined; // true
 const tightComparison7 = null === undefined; // false
+```
+
+## <a name="checkpropertyexistsinanobject">Check property exists in an object</a>
+
+```javascript
+const employee = {
+  id: 1,
+  name: "Jubayer",
+  salary: 5000,
+};
+
+const isSalaryExist = "salary" in employee; // true
+const isGenderExist = "gender" in employee; // false
 ```
