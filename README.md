@@ -9,18 +9,14 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use proper variable names](#usepropervariablenames)
 1. [Be careful with comparison using the loose equality operator](#becarefulwithcomparisonusingthelooseequalityoperator)
 
-## Use proper variable names
-
-<a name="usepropervariablenames"></a>
+## <a name="usepropervariablenames">Use proper variable names</a>
 
 ```javascript
 const firstName = "Jubayer";
 const lastName = "Khan";
 ```
 
-## Be careful with comparison using the loose equality operator
-
-<a name="becarefulwithcomparisonusingthelooseequalityoperator"></a>
+## <a name="becarefulwithcomparisonusingthelooseequalityoperator">Be careful with comparison using the loose equality operator</a>
 
 ```javascript
 const looseComparison1 = [100] == 100; // true
