@@ -12,6 +12,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Conditionally add a property to an object](#conditionallyaddapropertytoanobject)
 1. [Use includes to check for multiple criteria](#useincludestocheckformultiplecriteria)
 1. [Remove duplicates from an array using Set](#removeduplicatesfromanarrayusingset)
+1. [Use spread operator to shallow copy arrays and objects](#usespreadoperatortoshallowcopyarraysandobjects)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -86,4 +87,17 @@ const numbers = [1, 2, 4, 5, 2, 4, 9, 11, 4, 11];
 
 const uniqueColors = [...new Set(colors)]; // ["red","green","blue","pink"]
 const uniqueNumbers = [...new Set(numbers)]; // [1,2,4,5,9,11]
+```
+
+## <a name="usespreadoperatortoshallowcopyarraysandobjects">Use spread operator to shallow copy arrays and objects</a>
+
+```javascript
+const scores = [10, 20, 40, 60];
+const empoyeeOne = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+};
+
+const newScores = [...scores];
+const newEmpoyeeOne = { ...empoyeeOne };
 ```
