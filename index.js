@@ -1,6 +1,8 @@
-const rgbColors = ["red", "green", "blue"];
-const isRgbColor = (color) => {
-  return rgbColors.includes(color);
-};
+const colors = ["red", "green", "blue", "pink", "red", "green"];
+const numbers = [1, 2, 4, 5, 2, 4, 9, 11, 4, 11];
 
-console.log("isRgbColor", isRgbColor("red"));
+const uniqueColors = [...new Set(colors)];
+const uniqueNumbers = [...new Set(numbers)];
+
+console.log("colors", uniqueColors);
+console.log("numbers", uniqueNumbers);

@@ -11,6 +11,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Check property exists in an object](#checkpropertyexistsinanobject)
 1. [Conditionally add a property to an object](#conditionallyaddapropertytoanobject)
 1. [Use includes to check for multiple criteria](#useincludestocheckformultiplecriteria)
+1. [Remove duplicates from an array using Set](#removeduplicatesfromanarrayusingset)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -64,7 +65,7 @@ const includeSalary = true;
 const employee = {
   id: 1,
   name: "Jubayer",
-  ...(includeSalary && {salary: })
+  ...(includeSalary && { salary: 500 }),
 };
 ```
 
@@ -75,4 +76,14 @@ const rgbColors = ["red", "green", "blue"];
 const isRgbColor = (color) => {
   return rgbColors.includes(color);
 };
+```
+
+## <a name="removeduplicatesfromanarrayusingset">Remove duplicates from an array using Set</a>
+
+```javascript
+const colors = ["red", "green", "blue", "pink", "red", "green"];
+const numbers = [1, 2, 4, 5, 2, 4, 9, 11, 4, 11];
+
+const uniqueColors = [...new Set(colors)]; // ["red","green","blue","pink"]
+const uniqueNumbers = [...new Set(numbers)]; // [1,2,4,5,9,11]
 ```
