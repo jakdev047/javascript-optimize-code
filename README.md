@@ -10,6 +10,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Be careful with comparison using the loose equality operator](#becarefulwithcomparisonusingthelooseequalityoperator)
 1. [Check property exists in an object](#checkpropertyexistsinanobject)
 1. [Conditionally add a property to an object](#conditionallyaddapropertytoanobject)
+1. [Use includes to check for multiple criteria](#useincludestocheckformultiplecriteria)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -64,5 +65,14 @@ const employee = {
   id: 1,
   name: "Jubayer",
   ...(includeSalary && {salary: })
+};
+```
+
+## <a name="useincludestocheckformultiplecriteria">Use includes to check for multiple criteria</a>
+
+```javascript
+const rgbColors = ["red", "green", "blue"];
+const isRgbColor = (color) => {
+  return rgbColors.includes(color);
 };
 ```
