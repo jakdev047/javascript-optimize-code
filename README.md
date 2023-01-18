@@ -13,6 +13,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use includes to check for multiple criteria](#useincludestocheckformultiplecriteria)
 1. [Remove duplicates from an array using Set](#removeduplicatesfromanarrayusingset)
 1. [Use spread operator to shallow copy arrays and objects](#usespreadoperatortoshallowcopyarraysandobjects)
+1. [Avoid delete keyword](#avoiddeletekeyword)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -100,4 +101,25 @@ const empoyeeOne = {
 
 const newScores = [...scores];
 const newEmpoyeeOne = { ...empoyeeOne };
+```
+
+## <a name="avoiddeletekeyword">Avoid delete keyword</a>
+
+- `Bad Practice`
+
+```javascript
+const empoyeeTwo = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+  salary: 500,
+};
+delete empoyeeTwo.salary;
+// { id: 1, name: 'Jubayer Alam Khan' }
+```
+
+- `Good Practice`
+
+```javascript
+const { salary, ...newEmployee } = empoyeeTwo;
+// { id: 1, name: 'Jubayer Alam Khan' }
 ```
