@@ -9,6 +9,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use proper variable names](#usepropervariablenames)
 1. [Be careful with comparison using the loose equality operator](#becarefulwithcomparisonusingthelooseequalityoperator)
 1. [Check property exists in an object](#checkpropertyexistsinanobject)
+1. [Conditionally add a property to an object](#conditionallyaddapropertytoanobject)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -53,4 +54,15 @@ const employee = {
 
 const isSalaryExist = "salary" in employee; // true
 const isGenderExist = "gender" in employee; // false
+```
+
+## <a name="conditionallyaddapropertytoanobject">Conditionally add a property to an object</a>
+
+```javascript
+const includeSalary = true;
+const employee = {
+  id: 1,
+  name: "Jubayer",
+  ...(includeSalary && {salary: })
+};
 ```
