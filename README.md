@@ -14,8 +14,9 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Remove duplicates from an array using Set](#removeduplicatesfromanarrayusingset)
 1. [Use spread operator to shallow copy arrays and objects](#usespreadoperatortoshallowcopyarraysandobjects)
 1. [Avoid delete keyword](#avoiddeletekeyword)
-1. [Use Array.isArray to determine the array](#useArrayisArraytodeterminethearray)
+1. [Use Array.isArray to determine the array](#usearrayisarraytodeterminethearray)
 1. [Use of falsy bouncer](#useoffalsybouncer)
+1. [Use Array.some to check occurrence in array](#usearraysometocheckoccurrenceinarray)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -126,7 +127,7 @@ const { salary, ...newEmployee } = empoyeeTwo;
 // { id: 1, name: 'Jubayer Alam Khan' }
 ```
 
-## <a name="useArrayisArraytodeterminethearray">Use Array.isArray to determine the array</a>
+## <a name="usearrayisarraytodeterminethearray">Use Array.isArray to determine the array</a>
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -149,4 +150,27 @@ console.log(Array.isArray(empoyee)); // false
 const numbersWithFalsyValue = [7, null, 10, 17, false, NaN];
 const validNaumbers = numbersWithFalsyValue.filter(Boolean);
 console.log(validNaumbers); // [ 7, 10, 17 ]
+```
+
+## <a name="usearraysometocheckoccurrenceinarray">Use Array.some to check occurrence in array</a>
+
+- `Bad Practice`
+
+```javascript
+const assets = [
+  { id: 1, title: "V-1", type: "video" },
+  { id: 2, title: "A-1", type: "audio" },
+];
+
+const hasVideoAsset = assets.find((asset) => asset.type === "video");
+
+console.log(Boolean(hasVideoAsset)); // true
+```
+
+- `Good Practice`
+
+```javascript
+const hasVideoAsset = assets.some((asset) => asset.type === "video");
+
+console.log(hasVideoAsset); // true
 ```
