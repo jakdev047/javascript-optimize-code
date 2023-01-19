@@ -14,7 +14,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Remove duplicates from an array using Set](#removeduplicatesfromanarrayusingset)
 1. [Use spread operator to shallow copy arrays and objects](#usespreadoperatortoshallowcopyarraysandobjects)
 1. [Avoid delete keyword](#avoiddeletekeyword)
-1. [Use Array.isArray to determine the array](#useArray.isArraytodeterminethearray)
+1. [Use Array.isArray to determine the array](#useArrayisArraytodeterminethearray)
 1. [Use of falsy bouncer](#useoffalsybouncer)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
