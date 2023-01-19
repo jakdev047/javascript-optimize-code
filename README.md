@@ -174,3 +174,5 @@ const hasVideoAsset = assets.some((asset) => asset.type === "video");
 
 console.log(hasVideoAsset); // true
 ```
+
+**[⬆ back to top](#table-of-contents)**
