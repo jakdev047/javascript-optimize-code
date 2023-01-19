@@ -17,6 +17,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use Array.isArray to determine the array](#usearrayisarraytodeterminethearray)
 1. [Use of falsy bouncer](#useoffalsybouncer)
 1. [Use Array.some to check occurrence in array](#usearraysometocheckoccurrenceinarray)
+1. [Readable numbers](#readablenumbers)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -193,6 +194,30 @@ console.log(Boolean(hasVideoAsset)); // true
 const hasVideoAsset = assets.some((asset) => asset.type === "video");
 
 console.log(hasVideoAsset); // true
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="readablenumbers">Readable numbers</a>
+
+- `Bad Practice`
+
+```javascript
+const largeNumber = 45000000000;
+
+console.log(largeNumber); // 45000000000
+```
+
+- `Good Practice`
+
+```javascript
+const largeNumber = 45_000_000_000;
+
+console.log(largeNumber); // 45_000_000_000
+
+const largeNumber = 45e9;
+
+console.log(largeNumber); // 45e9
 ```
 
 **[⬆ back to top](#table-of-contents)**

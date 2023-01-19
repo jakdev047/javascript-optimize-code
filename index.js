@@ -1,6 +1,9 @@
-const assets = [
-  { id: 1, title: "V-1", type: "video" },
-  { id: 2, title: "A-1", type: "audio" },
-];
-const hasVideoAsset = assets.some((asset) => asset.type === "video");
-console.log(hasVideoAsset);
+const largeNumber = 45000000000;
+const largeNumberOne = 45_000_000_000;
+const largeNumberTwo = 45e9;
+
+console.log(largeNumber);
+
+console.log(largeNumberOne);
+
+console.log(largeNumberTwo);
