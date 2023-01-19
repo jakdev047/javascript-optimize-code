@@ -1,2 +1,3 @@
-const numbers = [1, 2, 3, 4, 5];
-console.log(Array.isArray(numbers));
+const numbersWithFalsyValue = [7, null, 10, 17, false, NaN];
+const validNaumbers = numbersWithFalsyValue.filter(Boolean);
+console.log(validNaumbers);
