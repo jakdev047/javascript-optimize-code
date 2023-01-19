@@ -14,6 +14,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Remove duplicates from an array using Set](#removeduplicatesfromanarrayusingset)
 1. [Use spread operator to shallow copy arrays and objects](#usespreadoperatortoshallowcopyarraysandobjects)
 1. [Avoid delete keyword](#avoiddeletekeyword)
+1. [Use Array.isArray to determine the array](#useArrayisArraytodeterminethearray)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -122,4 +123,21 @@ delete empoyeeTwo.salary;
 ```javascript
 const { salary, ...newEmployee } = empoyeeTwo;
 // { id: 1, name: 'Jubayer Alam Khan' }
+```
+
+## <a name="useArrayisArraytodeterminethearray">Use Array.isArray to determine the array</a>
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+console.log(Array.isArray(numbers)); // true
+
+const age = 18;
+console.log(Array.isArray(age)); // false
+
+const empoyee = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+  salary: 500,
+};
+console.log(Array.isArray(empoyee)); // false
 ```
