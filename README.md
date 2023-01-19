@@ -25,6 +25,8 @@ const firstName = "Jubayer";
 const lastName = "Khan";
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## <a name="becarefulwithcomparisonusingthelooseequalityoperator">Be careful with comparison using the loose equality operator</a>
 
 ```javascript
@@ -50,6 +52,8 @@ const looseComparison7 = null == undefined; // true
 const tightComparison7 = null === undefined; // false
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## <a name="checkpropertyexistsinanobject">Check property exists in an object</a>
 
 ```javascript
@@ -63,6 +67,8 @@ const isSalaryExist = "salary" in employee; // true
 const isGenderExist = "gender" in employee; // false
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## <a name="conditionallyaddapropertytoanobject">Conditionally add a property to an object</a>
 
 ```javascript
@@ -74,6 +80,8 @@ const employee = {
 };
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## <a name="useincludestocheckformultiplecriteria">Use includes to check for multiple criteria</a>
 
 ```javascript
@@ -82,6 +90,8 @@ const isRgbColor = (color) => {
   return rgbColors.includes(color);
 };
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## <a name="removeduplicatesfromanarrayusingset">Remove duplicates from an array using Set</a>
 
@@ -92,6 +102,8 @@ const numbers = [1, 2, 4, 5, 2, 4, 9, 11, 4, 11];
 const uniqueColors = [...new Set(colors)]; // ["red","green","blue","pink"]
 const uniqueNumbers = [...new Set(numbers)]; // [1,2,4,5,9,11]
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## <a name="usespreadoperatortoshallowcopyarraysandobjects">Use spread operator to shallow copy arrays and objects</a>
 
@@ -105,6 +117,8 @@ const empoyeeOne = {
 const newScores = [...scores];
 const newEmpoyeeOne = { ...empoyeeOne };
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## <a name="avoiddeletekeyword">Avoid delete keyword</a>
 
@@ -127,6 +141,8 @@ const { salary, ...newEmployee } = empoyeeTwo;
 // { id: 1, name: 'Jubayer Alam Khan' }
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## <a name="usearrayisarraytodeterminethearray">Use Array.isArray to determine the array</a>
 
 ```javascript
@@ -142,6 +158,8 @@ const empoyee = {
 console.log(Array.isArray(empoyee)); // false
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## <a name="useoffalsybouncer">Use of falsy bouncer</a>
 
 - `Falsy values in javascript are false, null, 0, "", NaN, undefined`
@@ -151,6 +169,8 @@ const numbersWithFalsyValue = [7, null, 10, 17, false, NaN];
 const validNaumbers = numbersWithFalsyValue.filter(Boolean);
 console.log(validNaumbers); // [ 7, 10, 17 ]
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## <a name="usearraysometocheckoccurrenceinarray">Use Array.some to check occurrence in array</a>
 
