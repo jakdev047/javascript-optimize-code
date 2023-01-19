@@ -126,6 +126,21 @@ const { salary, ...newEmployee } = empoyeeTwo;
 // { id: 1, name: 'Jubayer Alam Khan' }
 ```
 
+## <a name="useArrayisArraytodeterminethearray">Use Array.isArray to determine the array</a>
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+console.log(Array.isArray(numbers)); // true
+const age = 18;
+console.log(Array.isArray(age)); // false
+const empoyee = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+  salary: 500,
+};
+console.log(Array.isArray(empoyee)); // false
+```
+
 ## <a name="useoffalsybouncer">Use of falsy bouncer</a>
 
 - `Falsy values in javascript are false, null, 0, "", NaN, undefined`
