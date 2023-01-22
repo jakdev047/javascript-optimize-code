@@ -19,6 +19,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use Array.some to check occurrence in array](#usearraysometocheckoccurrenceinarray)
 1. [Readable numbers](#readablenumbers)
 1. [Pass function arguments as an object](#passfunctionargumentsasanobject)
+1. [Object destructuring on arrays](#objectdestructuringonarrays)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -228,24 +229,36 @@ console.log(largeNumber); // 45e9
 - `Bad Practice`
 
 ```javascript
-const createProduct = (name,price,categoryId,brandId) => {
+const createProduct = (name, price, categoryId, brandId) => {
   // code to create product
 };
-createProduct('Product-1',500,1,1);
+createProduct("Product-1", 500, 1, 1);
 ```
 
 - `Good Practice`
 
 ```javascript
-const createProduct = ({name,price,categoryId,brandId}) => {
+const createProduct = ({ name, price, categoryId, brandId }) => {
   // code to create product
 };
 createProduct({
-  name: 'Product-1',
+  name: "Product-1",
   price: 500,
   categoryId: 1,
-  brandId: 1
+  brandId: 1,
 });
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="objectdestructuringonarrays">Object destructuring on arrays</a>
+
+```javascript
+const colorCodes = ["#FFFFFF", "#000000", "#FF0000", "#FFFF00"];
+const { 0: whiteColor, 1: blackColor } = colorCodes;
+
+console.log(whiteColor); // #FFFFFF
+console.log(blackColor); // #000000
 ```
 
 **[⬆ back to top](#table-of-contents)**

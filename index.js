@@ -1,4 +1,5 @@
-const createProduct = (name, price, categoryId, brandId) => {
-  // code to create product
-};
-createProduct("Product-1", 500, 1, 1);
+const colorCodes = ["#FFFFFF", "#000000", "#FF0000", "#FFFF00"];
+const { 0: whiteColor, 1: blackColor } = colorCodes;
+
+console.log(whiteColor);
+console.log(blackColor);
