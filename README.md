@@ -20,6 +20,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Readable numbers](#readablenumbers)
 1. [Pass function arguments as an object](#passfunctionargumentsasanobject)
 1. [Object destructuring on arrays](#objectdestructuringonarrays)
+1. [Skip values in array destructuring](#skipvaluesinarraydestructuring)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -259,6 +260,17 @@ const { 0: whiteColor, 1: blackColor } = colorCodes;
 
 console.log(whiteColor); // #FFFFFF
 console.log(blackColor); // #000000
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="skipvaluesinarraydestructuring">Skip values in array destructuring</a>
+
+```javascript
+const scores = [10, 20, 30, 40, 50];
+const [, , ...restScores] = scores;
+
+console.log(restScores); // [ 30, 40, 50 ]
 ```
 
 **[⬆ back to top](#table-of-contents)**

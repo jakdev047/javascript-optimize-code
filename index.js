@@ -1,5 +1,4 @@
-const colorCodes = ["#FFFFFF", "#000000", "#FF0000", "#FFFF00"];
-const { 0: whiteColor, 1: blackColor } = colorCodes;
+const scores = [10, 20, 30, 40, 50];
+const [, , ...restScores] = scores;
 
-console.log(whiteColor);
-console.log(blackColor);
+console.log(restScores);
