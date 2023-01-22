@@ -18,6 +18,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use of falsy bouncer](#useoffalsybouncer)
 1. [Use Array.some to check occurrence in array](#usearraysometocheckoccurrenceinarray)
 1. [Readable numbers](#readablenumbers)
+1. [Pass function arguments as an object](#passfunctionargumentsasanobject)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -218,6 +219,33 @@ console.log(largeNumber); // 45_000_000_000
 const largeNumber = 45e9;
 
 console.log(largeNumber); // 45e9
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="passfunctionargumentsasanobject">Pass function arguments as an object</a>
+
+- `Bad Practice`
+
+```javascript
+const createProduct = (name,price,categoryId,brandId) => {
+  // code to create product
+};
+createProduct('Product-1',500,1,1);
+```
+
+- `Good Practice`
+
+```javascript
+const createProduct = ({name,price,categoryId,brandId}) => {
+  // code to create product
+};
+createProduct({
+  name: 'Product-1',
+  price: 500,
+  categoryId: 1,
+  brandId: 1
+});
 ```
 
 **[⬆ back to top](#table-of-contents)**
