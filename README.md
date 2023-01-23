@@ -23,6 +23,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Skip values in array destructuring](#skipvaluesinarraydestructuring)
 1. [Format the output of JSON.stringify](#formattheoutputofjsonstringify)
 1. [Filter with JSON.stringify](#filterwithjsonstringify)
+1. [Power of JSON.stringify replacer parameter](#powerofjsonstringifyreplacerparameter)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -335,6 +336,33 @@ console.log(filterEmployee);
     "address": {
       "district": "Dhaka"
     }
+  }
+*/
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="powerofjsonstringifyreplacerparameter">Power of JSON.stringify replacer parameter</a>
+
+```javascript
+const employee = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+  salary: 500,
+};
+
+const doubleSalary = (key, value) => {
+  return key === "salary" ? value * 2 : value;
+};
+
+const filterEmployee = JSON.stringify(employee, doubleSalary, 2);
+
+console.log(filterEmployee);
+/*
+  {
+    "id": 1,
+    "name": "Jubayer Alam Khan",
+    "salary": 1000
   }
 */
 ```

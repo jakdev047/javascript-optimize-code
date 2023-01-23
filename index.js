@@ -2,15 +2,12 @@ const employee = {
   id: 1,
   name: "Jubayer Alam Khan",
   salary: 500,
-  address: {
-    policeStation: "Jatrabari",
-    district: "Dhaka",
-    division: "Dhaka",
-  },
 };
 
-const filters = ["name", "salary", "address", "district"];
+const doubleSalary = (key, value) => {
+  return key === "salary" ? value * 2 : value;
+};
 
-const filterEmployee = JSON.stringify(employee, filters, 2);
+const filterEmployee = JSON.stringify(employee, doubleSalary, 2);
 
 console.log(filterEmployee);
