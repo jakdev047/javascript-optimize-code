@@ -22,6 +22,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Object destructuring on arrays](#objectdestructuringonarrays)
 1. [Skip values in array destructuring](#skipvaluesinarraydestructuring)
 1. [Format the output of JSON.stringify](#formattheoutputofjsonstringify)
+1. [Filter with JSON.stringify](#filterwithjsonstringify)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -305,3 +306,37 @@ console.log(format);
   }
 */
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="filterwithjsonstringify">Filter with JSON.stringify</a>
+
+```javascript
+const employee = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+  salary: 500,
+  address: {
+    policeStation: "Jatrabari",
+    district: "Dhaka",
+    division: "Dhaka",
+  },
+};
+
+const filters = ["name", "salary", "address", "district"];
+
+const filterEmployee = JSON.stringify(employee, filters, 2);
+
+console.log(filterEmployee);
+/*
+  {
+    "name": "Jubayer Alam Khan",
+    "salary": 500,
+    "address": {
+      "district": "Dhaka"
+    }
+  }
+*/
+```
+
+**[⬆ back to top](#table-of-contents)**
