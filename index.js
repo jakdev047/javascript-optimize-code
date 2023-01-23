@@ -1,4 +1,8 @@
-const scores = [10, 20, 30, 40, 50];
-const [, , ...restScores] = scores;
+const employee = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+  salary: 500,
+};
+const format = JSON.stringify(employee, null, 2);
 
-console.log(restScores);
+console.log(format);

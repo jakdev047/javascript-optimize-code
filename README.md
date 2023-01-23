@@ -21,6 +21,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Pass function arguments as an object](#passfunctionargumentsasanobject)
 1. [Object destructuring on arrays](#objectdestructuringonarrays)
 1. [Skip values in array destructuring](#skipvaluesinarraydestructuring)
+1. [Format the output of JSON.stringify](#formattheoutputofjsonstringify)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -274,3 +275,33 @@ console.log(restScores); // [ 30, 40, 50 ]
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+## <a name="formattheoutputofjsonstringify">Format the output of JSON.stringify</a>
+
+- `Bad Practice`
+
+```javascript
+const employee = {
+  id: 1,
+  name: "Jubayer Alam Khan",
+  salary: 500,
+};
+const format = JSON.stringify(employee);
+
+console.log(format); // {"id":1,"name":"Jubayer Alam Khan","salary":500}
+```
+
+- `Good Practice`
+
+```javascript
+const format = JSON.stringify(employee, null, 2);
+
+console.log(format);
+/*
+  {
+    "id": 1,
+    "name": "Jubayer Alam Khan",
+    "salary": 500
+  }
+*/
+```
