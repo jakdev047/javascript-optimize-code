@@ -25,6 +25,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Filter with JSON.stringify](#filterwithjsonstringify)
 1. [Power of JSON.stringify replacer parameter](#powerofjsonstringifyreplacerparameter)
 1. [Don’t extend built-ins](#dontextendbuiltins)
+1. [Use of optional chaining on function call](#useofoptionalchainingonfunctioncall)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -384,6 +385,52 @@ const numbers = [1, 4, 7, 10, 20];
 const even = eventCount(numbers);
 
 console.log(even); // 3
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="useofoptionalchainingonfunctioncall">Use of optional chaining on function call</a>
+
+- `Bad Practice`
+
+```javascript
+const loadingFunc = () => {
+  console.log("Loading..."); // "Loading..."
+};
+const loadFunction = (loadingFunc) => {
+  if (loadingFunc) {
+    loadingFunc();
+  }
+  // loadingFunc && loadingFunc();
+};
+
+loadFunction(loadingFunc);
+```
+
+- `Bad Practice`
+
+```javascript
+const loadingFunc = () => {
+  console.log("Loading..."); // "Loading..."
+};
+const loadFunction = (loadingFunc) => {
+  loadingFunc && loadingFunc();
+};
+
+loadFunction(loadingFunc);
+```
+
+- `Good Practice`
+
+```javascript
+const loadingFunc = () => {
+  console.log("Loading..."); // "Loading..."
+};
+const loadFunction = (loadingFunc) => {
+  loadingFunc?.();
+};
+
+loadFunction(loadingFunc);
 ```
 
 **[⬆ back to top](#table-of-contents)**
