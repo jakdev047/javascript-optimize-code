@@ -24,6 +24,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Format the output of JSON.stringify](#formattheoutputofjsonstringify)
 1. [Filter with JSON.stringify](#filterwithjsonstringify)
 1. [Power of JSON.stringify replacer parameter](#powerofjsonstringifyreplacerparameter)
+1. [Don’t extend built-ins](#dontextendbuiltins)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -365,6 +366,24 @@ console.log(filterEmployee);
     "salary": 1000
   }
 */
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="dontextendbuiltins">Don’t extend built-ins</a>
+
+```javascript
+// array-utils.js
+export const eventCount = (list) => {
+  return list.reduce((count, number) => count + (number % 2 === 0 ? 1 : 0), 0);
+};
+
+// import from array-utils.js
+const numbers = [1, 4, 7, 10, 20];
+
+const even = eventCount(numbers);
+
+console.log(even); // 3
 ```
 
 **[⬆ back to top](#table-of-contents)**

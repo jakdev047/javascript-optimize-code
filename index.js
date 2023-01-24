@@ -1,13 +1,11 @@
-const employee = {
-  id: 1,
-  name: "Jubayer Alam Khan",
-  salary: 500,
+// array-utils.js
+export const eventCount = (list) => {
+  return list.reduce((count, number) => count + (number % 2 === 0 ? 1 : 0), 0);
 };
 
-const doubleSalary = (key, value) => {
-  return key === "salary" ? value * 2 : value;
-};
+// import from array-utils.js
+const numbers = [1, 4, 7, 10, 20];
 
-const filterEmployee = JSON.stringify(employee, doubleSalary, 2);
+const even = eventCount(numbers);
 
-console.log(filterEmployee);
+console.log(even);
