@@ -401,7 +401,6 @@ const loadFunction = (loadingFunc) => {
   if (loadingFunc) {
     loadingFunc();
   }
-  // loadingFunc && loadingFunc();
 };
 
 loadFunction(loadingFunc);
