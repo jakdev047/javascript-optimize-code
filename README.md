@@ -26,6 +26,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Power of JSON.stringify replacer parameter](#powerofjsonstringifyreplacerparameter)
 1. [Don’t extend built-ins](#dontextendbuiltins)
 1. [Use of optional chaining on function call](#useofoptionalchainingonfunctioncall)
+1. [Convert to a flat array using Array.flat](#converttoaflatarrayusingarrayflat)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -430,6 +431,21 @@ const loadFunction = (loadingFunc) => {
 };
 
 loadFunction(loadingFunc);
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="converttoaflatarrayusingarrayflat">Convert to a flat array using Array.flat</a>
+
+```javascript
+const numbers = [1, 2, [3, 4], [5, [6, 7]]];
+
+const flatNumbers = numbers.flat();
+const flatNumbers2 = numbers.flat(2);
+
+console.log(flatNumbers); // [ 1, 2, 3, 4, 5, [ 6, 7 ] ]
+
+console.log(flatNumbers2); // [ 1, 2, 3, 4, 5, 6, 7 ]
 ```
 
 **[⬆ back to top](#table-of-contents)**
