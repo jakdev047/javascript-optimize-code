@@ -28,6 +28,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use of optional chaining on function call](#useofoptionalchainingonfunctioncall)
 1. [Convert to a flat array using Array.flat](#converttoaflatarrayusingarrayflat)
 1. [Use console.time to debug performance](#useconsoletimetodebugperformance)
+1. [Logging using console.group](#loggingusingconsolegroup)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -464,6 +465,20 @@ for (let i = 0; i <= 5; i++) {
 console.log(`List Length: ${list.length}`); // List Length: 6
 
 console.timeEnd(label); // 0.127ms
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="loggingusingconsolegroup">Logging using console.group</a>
+
+```javascript
+console.group("Video");
+
+console.log("Video Uploaded");
+console.log("Video Validated");
+console.log("Video published");
+
+console.groupEnd();
 ```
 
 **[⬆ back to top](#table-of-contents)**

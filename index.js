@@ -1,10 +1,7 @@
-const label = "ForLoop";
-console.time(label);
+console.group("Video");
 
-const list = [];
-for (let i = 0; i <= 5; i++) {
-  list.push(`Item-${i}`);
-}
-console.log(`List Length: ${list.length}`); // List Length: 6
+console.log("Video Uploaded");
+console.log("Video Validated");
+console.log("Video published");
 
-console.timeEnd(label); // 0.127ms
+console.groupEnd();
