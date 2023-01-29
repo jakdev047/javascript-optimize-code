@@ -1,8 +1,10 @@
-const numbers = [1, 2, [3, 4], [5, [6, 7]]];
+const label = "ForLoop";
+console.time(label);
 
-const flatNumbers = numbers.flat();
-const flatNumbers2 = numbers.flat(2);
+const list = [];
+for (let i = 0; i <= 5; i++) {
+  list.push(`Item-${i}`);
+}
+console.log(`List Length: ${list.length}`); // List Length: 6
 
-console.log(flatNumbers);
-
-console.log(flatNumbers2);
+console.timeEnd(label); // 0.127ms

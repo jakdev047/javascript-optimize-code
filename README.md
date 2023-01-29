@@ -27,6 +27,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Don’t extend built-ins](#dontextendbuiltins)
 1. [Use of optional chaining on function call](#useofoptionalchainingonfunctioncall)
 1. [Convert to a flat array using Array.flat](#converttoaflatarrayusingarrayflat)
+1. [Use console.time to debug performance](#useconsoletimetodebugperformance)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -446,6 +447,23 @@ const flatNumbers2 = numbers.flat(2);
 console.log(flatNumbers); // [ 1, 2, 3, 4, 5, [ 6, 7 ] ]
 
 console.log(flatNumbers2); // [ 1, 2, 3, 4, 5, 6, 7 ]
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="useconsoletimetodebugperformance">Use console.time to debug performance</a>
+
+```javascript
+const label = "ForLoop";
+console.time(label);
+
+const list = [];
+for (let i = 0; i <= 5; i++) {
+  list.push(`Item-${i}`);
+}
+console.log(`List Length: ${list.length}`); // List Length: 6
+
+console.timeEnd(label); // 0.127ms
 ```
 
 **[⬆ back to top](#table-of-contents)**
