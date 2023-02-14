@@ -1,7 +1,12 @@
-const employee = { id: 1, name: "Jubayer Alam Khan" };
+const isRequired = () => {
+  throw Error("Argument is required");
+};
 
-if (!employee.salary) {
-  console.error("Salary not defined.");
-}
+const setCurrentVideoCode = (videoCode = isRequired()) => {
+  console.log(videoCode);
+};
 
-console.assert(employee.salary, "Salary not defined.");
+setCurrentVideoCode(); // Argument is required
+setCurrentVideoCode(""); //
+setCurrentVideoCode(null); // null
+setCurrentVideoCode("VD098"); // VD098

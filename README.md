@@ -30,6 +30,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Use console.time to debug performance](#useconsoletimetodebugperformance)
 1. [Logging using console.group](#loggingusingconsolegroup)
 1. [Conditional log message using console.assert](#conditionallogmessageusingconsoleassert)
+1. [Default assignment for required arguments of the function](#defaultassignmentforrequiredargumentsofthefunction)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -500,6 +501,25 @@ if (!employee.salary) {
 
 ```javascript
 console.assert(employee.salary, "Salary not defined.");
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="defaultassignmentforrequiredargumentsofthefunction">Default assignment for required arguments of the function</a>
+
+```javascript
+const isRequired = () => {
+  throw Error("Argument is required");
+};
+
+const setCurrentVideoCode = (videoCode = isRequired()) => {
+  console.log(videoCode);
+};
+
+setCurrentVideoCode(); // Argument is required
+setCurrentVideoCode(""); //
+setCurrentVideoCode(null); // null
+setCurrentVideoCode("VD098"); // VD098
 ```
 
 **[⬆ back to top](#table-of-contents)**
