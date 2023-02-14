@@ -1,7 +1,7 @@
-console.group("Video");
+const employee = { id: 1, name: "Jubayer Alam Khan" };
 
-console.log("Video Uploaded");
-console.log("Video Validated");
-console.log("Video published");
+if (!employee.salary) {
+  console.error("Salary not defined.");
+}
 
-console.groupEnd();
+console.assert(employee.salary, "Salary not defined.");

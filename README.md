@@ -29,6 +29,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Convert to a flat array using Array.flat](#converttoaflatarrayusingarrayflat)
 1. [Use console.time to debug performance](#useconsoletimetodebugperformance)
 1. [Logging using console.group](#loggingusingconsolegroup)
+1. [Conditional log message using console.assert](#conditionallogmessageusingconsoleassert)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -479,6 +480,26 @@ console.log("Video Validated");
 console.log("Video published");
 
 console.groupEnd();
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="conditionallogmessageusingconsoleassert">Conditional log message using console.assert</a>
+
+- `Bad Practice`
+
+```javascript
+const employee = { id: 1, name: "Jubayer Alam Khan" };
+
+if (!employee.salary) {
+  console.error("Salary not defined.");
+}
+```
+
+- `Good Practice`
+
+```javascript
+console.assert(employee.salary, "Salary not defined.");
 ```
 
 **[⬆ back to top](#table-of-contents)**
