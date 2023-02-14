@@ -31,6 +31,7 @@ _LinkedIn:_ [manjurhusen](https://www.linkedin.com/in/manjurhusen/)
 1. [Logging using console.group](#loggingusingconsolegroup)
 1. [Conditional log message using console.assert](#conditionallogmessageusingconsoleassert)
 1. [Default assignment for required arguments of the function](#defaultassignmentforrequiredargumentsofthefunction)
+1. [Avoid default exports](#avoiddefaultexports)
 
 ## <a name="usepropervariablenames">Use proper variable names</a>
 
@@ -520,6 +521,34 @@ setCurrentVideoCode(); // Argument is required
 setCurrentVideoCode(""); //
 setCurrentVideoCode(null); // null
 setCurrentVideoCode("VD098"); // VD098
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <a name="avoiddefaultexports">Avoid default exports</a>
+
+- `Bad Practice`
+
+```javascript
+// Export class
+class userService = {};
+
+export default userService;
+
+// Import class
+import userService from "./userservice";
+```
+
+- `Good Practice`
+
+```javascript
+// Export class
+class userService = {};
+
+export {userService} ;
+
+// Import class
+import {userService} from "./userservice";
 ```
 
 **[⬆ back to top](#table-of-contents)**
